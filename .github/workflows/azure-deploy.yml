@@ -4,10 +4,10 @@ on:
   push:
     branches:
       - main
-    path:
+    paths:
       - infrastructure/**
   pull_request:
-    path:
+    paths:
       - infrastructure/**
   workflow_dispatch: # manual trigger
 
@@ -29,7 +29,7 @@ on:
             tenant-id: ${{ secrets.AZURE_TENANT_ID }}
             subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
         
-        - uses: Azure/CLI@V2
+        - uses: Azure/CLI@v2
           with:
             inlineScript: |
               #!/bin/bash
