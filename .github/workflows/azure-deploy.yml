@@ -32,7 +32,7 @@ on:
         - uses: Azure/CLI@V2
           with:
             inlineScript: |
-            #!/bin.bash
+            #!/bin/bash
             az group create --name ${{ vars.RESOURCE_GROUP_NAME }} --location ${{ vars.RESOURCE_GROUP_LOCATION }}
             echo "Azure resource group created"
         
