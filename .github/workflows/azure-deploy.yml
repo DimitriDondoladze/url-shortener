@@ -32,9 +32,9 @@ on:
         - uses: Azure/CLI@V2
           with:
             inlineScript: |
-            #!/bin/bash
-            az group create --name ${{ vars.RESOURCE_GROUP_NAME }} --location ${{ vars.RESOURCE_GROUP_LOCATION }}
-            echo "Azure resource group created"
+              #!/bin/bash
+              az group create --name ${{ vars.RESOURCE_GROUP_NAME }} --location ${{ vars.RESOURCE_GROUP_LOCATION }}
+              echo "Azure resource group created"
         
         - name: Deploy
           uses: azure/arm-deploy@v2
