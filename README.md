@@ -38,6 +38,15 @@ az ad sp create-for-rbac --name "GitHub-Actions-SP" \
                          --sdk-auth
 ```
 
+### Apply to Custom Contributor Role
+```bash
+az ad sp create-for-rbac --name "GitHub-Actions-SP" \
+                         --role 'infra_deploy' \
+                         --scopes /subscriptions/9ecb3919-6f66-4ea6-a025-5d5f13d8d197 \
+                         --sdk-auth
+```
+
+
 #### Configure a federated identity credential on an app
 https://learn.microsoft.com/en-gb/entra/workload-id/workload-identity-federation-create-trust?pivots=identity-wif-apps-methods-azp#configure-a-federated-identity-credential-on-an-app
 
